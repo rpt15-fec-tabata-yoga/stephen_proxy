@@ -4,12 +4,8 @@ import styles from '/Users/jenn/Desktop/HackReactor/FEC/stephen_proxy/public/sty
 
 const Menu = () => {
   return (
-    <div className={styles.menu}>
-      <div className={styles.body} align="center">
-        <div id={styles.topMenu}>
+    <div className={`${styles.menu} ${styles.topMenu}`}>
           <a className={styles.installBtn}>Install Steam</a>  login | language
-        </div>
-      </div>
     </div>
   );
 };

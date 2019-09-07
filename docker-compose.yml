@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  overview:
+    build: .
+    volumes:
+      - .:/src/app
+      - /app/node_modules
+
+    ports:
+      - '80:3006'
