@@ -6,7 +6,6 @@ body {
   display: grid;
   grid-template-columns: 10% 50% 30% 10%;
   grid-template-rows: auto auto auto auto auto auto;
-  grid-column-gap: 10px;
 }
 
 #menu {
@@ -58,7 +57,9 @@ body {
   font-weight: normal;
   font-size: 14px;
   color:#c6d4df;
+  grid-column: 3 / 3;
 }
+
 #topMenu {
   width: 1200px;
   padding-top: 20px;
