@@ -4,43 +4,70 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 10% 50% 30% 10%;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 20% 40% 20% 20%;
+  grid-template-rows: auto;
+  /*
+  unable to use because we're using screenshots and background image won't line up
+  background-image: url('https://steamcdn-a.akamaihd.net/steam/apps/413150/page_bg_generated_v6b.jpg?t=1567792991');
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-width: 972px; */
 }
 
-#menu {
+#steamNav {
+  grid-column: 2 / span 2;
+  grid-row: 1 / 1;
+}
+
+.steamNavBG {
+  background: #171a21;
   grid-column: 1 / span 4;
   grid-row: 1 / 1;
 }
 
+#topNav {
+  grid-column: 2 / span 2;
+  grid-row: 2 / 2;
+}
+
 #photogallery {
-  grid-column: 2 / 2;
-  grid-row: 2 / 2;
-}
-
-#overview {
-  grid-column: 3 / 3;
-  grid-row: 2 / 2;
-}
-
-#recentUpdates {
   grid-column: 2 / 2;
   grid-row: 3 / 3;
 }
 
-#topReviews {
+#overview {
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+}
+
+#purchaseGame {
   grid-column: 2 / 2;
   grid-row: 4 / 4;
 }
 
-#aboutGame {
+#rightSideBar {
+  grid-column: 3 / 3;
+  grid-row: 4 / span 8;
+}
+
+#topReviews {
   grid-column: 2 / 2;
   grid-row: 5 / 5;
 }
 
-#reviews {
+#aboutGame {
   grid-column: 2 / 2;
   grid-row: 6 / 6;
+}
+
+#systemRequirements {
+  grid-column: 2 / 2;
+  grid-row: 7 / 7;
+}
+
+.reviews {
+  grid-column: 2 / 2;
+  grid-row: 8 / 8;
 }
 
 .body {
