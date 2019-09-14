@@ -48,7 +48,7 @@ app.use('/api/:service/bundle.js', (req, res) => {
         console.log(`error in request for ${service}: ${err}`);
       })
   } else if (service === 'aboutGame') {
-    axios.get(`${aboutGame}`)
+    axios.get(`${aboutGame}/bundle.js`)
       .then((response) => {
         res.send(response.data);
       })
