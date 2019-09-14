@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // write code to handle getting data
 let overview = 'http://ec2-54-183-97-229.us-west-1.compute.amazonaws.com';
 let reviews = 'http://localhost:3001';
-let image = 'http://localhost:3002';
+let image = 'http://ec2-13-57-33-155.us-west-1.compute.amazonaws.com:3002';
 let aboutGame = 'http://my-env.wf8cymc59m.us-west-1.elasticbeanstalk.com';
 let topReviews = 'http:localhost:3004';
 
@@ -32,7 +32,7 @@ app.use('/api/:service/bundle.js', (req, res) => {
         console.log(`error in request for ${service}: ${err}`);
       })
   } else if (service === 'reviews') {
-    axios.get(`${overview}/Stardew%20Valley/dist/bundle.js`)
+    axios.get(`${reviews}/Stardew%20Valley/dist/bundle.js`)
       .then((response) => {
         res.send(response.data);
       })
@@ -40,7 +40,7 @@ app.use('/api/:service/bundle.js', (req, res) => {
         console.log(`error in request for ${service}: ${err}`);
       })
   } else if (service === 'image') {
-    axios.get(`${overview}/1/stardew_valley/dist/bundle.js`)
+    axios.get(`${image}/1/stardew_valley/bundle.js`)
       .then((response) => {
         res.send(response.data);
       })
@@ -56,7 +56,7 @@ app.use('/api/:service/bundle.js', (req, res) => {
         console.log(`error in request for ${service}: ${err}`);
       })
   } else if (service === 'topReviews') {
-    axios.get(`${overview}/1/bundle.js`)
+    axios.get(`${topReviews}/1/bundle.js`)
       .then((response) => {
         res.send(response.data);
       })
