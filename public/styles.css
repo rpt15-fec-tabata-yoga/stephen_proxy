@@ -61,7 +61,6 @@ body {
 #aboutGame {
   grid-column: 2 / 2;
   grid-row: 6 / 6;
-  width: 100%;
 }
 
 #systemRequirements {
